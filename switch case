@@ -1,0 +1,27 @@
+public class SwitchCaseCalculator {
+    public static void main(String[] args) {
+        
+        double num1 = 10;
+        double num2 = 5;
+        int choice = 3; 
+
+        System.out.println("First number: " + num1);
+        System.out.println("Second number: " + num2);
+        System.out.println("Chosen operation: " + choice);
+
+    
+        switch (choice) {
+            case 1:
+                System.out.println("Result: " + (num1 + num2));
+                break;
+            case 2:
+                System.out.println("Result: " + (num1 - num2));
+                break;
+            case 3:
+                System.out.println("Result: " + (num1 * num2));
+                break;
+            default:
+                System.out.println("Invalid choice!");
+        }
+    }
+}
