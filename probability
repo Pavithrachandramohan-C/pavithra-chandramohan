@@ -1,0 +1,44 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        System.out.print("Enter number of rows: ");
+        int rows = scanner.nextInt();
+
+        int totalFlips = 0;
+        int headCount = 0;
+        int tailCount = 0;
+
+        System.out.println("Coin flip pattern (1=Head, 0=Tail):");
+
+        for (int i = 1; i <= rows; i++) {          
+            for (int j = 1; j <= i; j++) {          
+                int flip = random.nextInt(2);       
+                totalFlips++;
+
+                System.out.print(flip + " ");
+
+                if (flip == 1) {
+                    headCount++;
+                } else {
+                    tailCount++;
+                }
+            }
+            System.out.println();
+        }
+        double headProb = (headCount * 100.0) / totalFlips;
+        double tailProb = (tailCount * 100.0) / totalFlips;
+
+        System.out.println();
+        System.out.println("Total flips: " + totalFlips);
+        System.out.println("Heads: " + headCount + " (" + String.format("%.2f", headProb) + "%)");
+        System.out.println("Tails: " + tailCount + " (" + String.format("%.2f", tailProb) + "%)");
+
+        scanner.close();
+    }
+}
