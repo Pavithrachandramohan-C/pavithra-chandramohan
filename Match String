@@ -1,0 +1,12 @@
+class Main {
+    public static void main(String[] args) {
+        String a="New world";
+        String b="Hello_World";
+        String x="Hello|world|java";
+        System.out.println(x);
+        System.out.println("Hello".matches(x));
+                System.out.println("World".matches(x));
+                        System.out.println("JavaScript".matches(x));
+        System.out.println(b.regionMatches(7,a,4,5));
+    }
+}
