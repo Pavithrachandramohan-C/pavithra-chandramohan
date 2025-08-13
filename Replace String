@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        String x = "Hello";
+        String y = "Hello pavi hi";
+    
+        char[] chars = x.toCharArray();
+        chars[1] = 'p';
+        x = new String(chars);
+        System.out.println(x);  
+
+
+        String a = "Hello";
+        System.out.println(y.replaceAll(a, "Hi")); 
+
+    
+        String b = "Hello";
+        System.out.println(y.replaceFirst(b, "HI"));
+    }
+}
