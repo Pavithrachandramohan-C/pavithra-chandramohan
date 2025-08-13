@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your sentence: ");
+        String input = sc.nextLine();
+        if (input.contains("b tech it")) {
+            System.out.println("Match found: 'btech it'");
+        } else {
+            System.out.println("No match for 'btech it'");
+        }
+        String replaced = input.replace("b tech", "btech");
+        String finalOutput = replaced.replaceAll("\\bit\\b", "aids");
+        System.out.println("output: " + finalOutput);
+    }
+}
