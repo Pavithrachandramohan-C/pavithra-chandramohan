@@ -1,0 +1,476 @@
+Update String - InBuilt Methods
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner x = new Scanner(System.in);
+	    System.out.println("Enter any String:");
+	    String n=x.nextLine();
+	    char mystr= n.charAt(0);
+		System.out.println(mystr);
+	
+	    int my= n.codePointAt(3);
+		System.out.println(my);
+
+		int m =n.codePointBefore(7);
+		System.out.println(m);	
+	}
+}
+//Output
+Enter any String:
+pavi
+p
+115
+105
+
+//Program
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        System.out.println("Enter any String1:");
+        String str1 = x.nextLine();
+        System.out.println("Enter any String2:");
+        String str2 = x.nextLine();
+
+        int mystr = str1.codePointCount(0, str1.length());
+        System.out.println(mystr);
+
+        int my = str1.compareTo(str2);
+        System.out.println(my);
+    }
+}
+//Output
+Enter any String1:
+neha
+Enter any String2:
+pavi
+7
+21
+
+
+//Program
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        System.out.println("Enter any String1:");
+        String str1 = x.nextLine();
+        System.out.println("Enter any String2:");
+        String str2 = x.nextLine();
+
+        int my = str1.compareToIgnoreCase(str2);
+        System.out.println(my);
+        
+        String mystr = str1.concat(str2);
+        System.out.println(mystr);
+    }
+}
+//Output
+Enter any String1:
+PAVI
+Enter any String2:
+pavi
+0
+PAVIpavi
+
+
+//Program
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        System.out.println("Enter any String1:");
+        String str1 = x.nextLine();
+      
+        boolean my = str1.contains("Hello");
+        System.out.println(my);
+        
+        boolean mystr = str1.contentEquals("Hello");
+        System.out.println(mystr);
+    }
+}
+//Output
+Enter any String1:
+Hello
+true
+true
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        char[] data = {'V','A','R','S','H','N','I'};
+        
+        String str = String.copyValueOf(data, 0, 7);
+        System.out.println(str);
+
+        System.out.println(str.endsWith("I"));
+    }
+}
+//Output
+pavi
+true
+
+
+//Program
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of characters: ");
+        int n = sc.nextInt();
+        char[] data = new char[n];
+        System.out.println("Enter characters:");
+        for (int i = 0; i < n; i++) {
+            data[i] = sc.next().charAt(0);
+        }
+
+        String str = String.copyValueOf(data, 0, n);
+        System.out.println("The string is: " + str);
+        System.out.println(str.endsWith("I"));
+    }
+}
+//Output
+Enter number of characters: 7
+Enter characters:
+P A V I
+The string is: pavi
+true
+
+
+//Program
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        String data = "hello";
+        String hi = "hi %s my age %d";
+       
+        System.out.println(data.equalsIgnoreCase("hello"));
+        System.out.printf(hi, "hello", 18);
+    }
+}
+//Output
+hi hello my age is 18
+
+
+//Program
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a name: ");
+        String data = sc.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+        String hi = "hi %s my age %d";
+        System.out.println(data.equalsIgnoreCase("varshni"));
+        System.out.printf(hi, data, age);
+
+    }
+}
+//Output
+Enter a name: pavi
+Enter your age: 19
+true
+hi varshni my age 19
+true
+hi hello my age 18
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        char[] data={'0','1','2','3','4','5','6','7','8','9'};
+        System.out.println(data);
+        String mystring="Hello World!";
+        mystring.getChars(7,11,data,4);
+        System.out.println(data);
+ }
+}
+//Output
+0123456789
+0123orld89
+
+
+//Progarm
+public class Main {
+    public static void main(String[] args) {
+        char[] data={'9','1','6','1'};
+        System.out.print(data);
+        String mystring="neha";
+        mystring.getChars(7,7,data,0);
+        System.out.print(mystring);
+ }
+}
+//Output
+9161pavi
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name="Varshni";
+        byte[] arr=name.getBytes();
+        System.out.print(arr[0]);
+    }
+}
+//Output
+86
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name="Varshni";
+        byte[] arr=name.getBytes();
+        System.out.print(name.hashCode());
+    }
+}
+//Output
+1901743703
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name="varshni";
+        System.out.print(name.toUpperCase());
+    }
+}
+//Output
+pavi
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name="PAVI";
+        System.out.print(name.toLowerCase());
+    }
+}
+//Output
+PAVI
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name="NEHA PAVI";
+        System.out.print(name.indexOf("asina"));
+    }
+}
+//Output
+8
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name="Hello World";
+        String names="";
+        System.out.println(name.isEmpty());
+        System.out.println(names.isEmpty());
+    }
+}
+//Output
+false
+true
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name=String.join(" ","NEHA","Adaikkalam");
+        System.out.println(name);
+    }
+}
+//Output
+NEHA Adaikkalam
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name=String.join("Hello World");
+        System.out.println(name.lastIndexOf("World"));
+    }
+}
+//Output
+-1
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String a="Hello Varshni";
+        String b="World Asina";
+        String x = "neha|pavi|sri";
+        System.out.println("neha".matches(x));
+        System.out.println("pavi".matches(x));
+        System.out.println("sri".matches(x));
+        System.out.println(a.regionMatches(7,a,7,5));
+    }
+}
+//Output
+true
+true
+false
+true
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String x="World";
+        String y="World neha World";
+        System.out.println(x.replace('l','p'));
+        
+        String a = "(?i)World";
+        System.out.println(y.replaceAll(a,"Hii"));
+        String b = "World";
+        System.out.println(y.replaceFirst(b,"Hii"));
+    }
+}
+//Output
+Worpd
+Hii neha Hii
+Hii neha World
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String x="Hello World";
+        String y="[,\\.\\s]";
+        String[] z=x.split(y);
+        for(String  s:z){
+        System.out.println(s);
+    }
+}
+}
+//Output
+Hello
+World
+
+
+//Progarm
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String x = sc.nextLine();
+        String y = "[\\.\\s]";
+        String[] z = x.split(y);
+        for (String s : z) {
+            System.out.println(s);
+        }
+    }
+}
+//Output
+Enter a string: Varshni Adaikkalam
+neha
+Adaikkalam
+
+
+
+//Program
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String x = sc.nextLine();
+        String y = " ";
+        String[] z = x.split(y);
+        for (String s : z) {
+            System.out.println(s);
+        }
+        System.out.println(x.concat(y));
+    }
+}
+//Output
+Enter a string: neha Adaikkalam
+neha
+Adaikkalam
+neha Adaikkalam 
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String a="Hello";
+        System.out.println(a.startsWith("Hello"));
+        System.out.println(a.startsWith("World"));
+    }
+}
+//Output
+true
+false
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String x="Hello World";
+        String a=(x.substring(0,5));
+        System.out.println(a);
+        String b=(x.substring(6,11));
+        System.out.println(b);
+        System.out.println(a.concat(" "+b));
+	}
+  }
+//Output
+Hello
+World
+Hello World
+
+
+//Program
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        String x = "Hello World";
+        char[] y = x.toCharArray();   
+        System.out.println(y[0]); 
+    }
+}
+//Output
+H
+
+
+//Program
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); 
+        System.out.print("Enter a string: ");
+        String x = scanner.nextLine();          
+            System.out.println(x.toUpperCase());       
+            System.out.println(x.toLowerCase());       
+        }
+    }
+//Output
+Enter a string: Varshni
+NEHA
+neha
+
+
+
+//Program
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); 
+        System.out.print("Enter a string: ");
+        String x = scanner.nextLine();          
+            System.out.println(x); 
+            System.out.println(x.trim()); 
+            System.out.println(String.valueOf(x));    
+                 
+        }
+    }
+//Output
+Enter a string:    neha Adaikkalam
+    PAVI Adaikkalam
+    PAVI Adaikkalam
