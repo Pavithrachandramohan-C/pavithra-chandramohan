@@ -1,0 +1,20 @@
+class Vehical {
+    void vehical(){
+         System.out.println("This is a vehicle");
+    }
+}
+class FourWheeler extends Vehical {
+    FourWheeler(){
+         System.out.println("This is a FourWheeler");
+    }
+}
+class Car extends FourWheeler {
+    Car(){
+         System.out.println("This is a Car");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Car obj=new Car();
+    }
+}
