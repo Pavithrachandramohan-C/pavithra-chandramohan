@@ -1,0 +1,22 @@
+interface Audi {
+    default void modelofAudi() {
+        System.out.println("This is a modelofAudi");
+    }
+}
+interface BMW {
+    default void modelofBMW() {
+        System.out.println("This is a modelofBMW");
+    }
+}
+class Car implements Audi,BMW{
+    Car(){
+        System.out.println("This is a Cars");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car obj = new Car();
+        obj.modelofAudi();
+        obj.modelofBMW();
+    }
+}
